@@ -1,0 +1,17 @@
+.vagrant
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+/cookbooks
+.Berksfile.lock
+
+# Bundler
+bin/*
+.bundle/*
+
+# Test-Kitchen
+.kitchen/
+.kitchen.local.yml
