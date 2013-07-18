@@ -101,8 +101,7 @@ License and Author
 Author:: [Ross Timson][rosstimson] (<ross@rosstimson.com>)
 
 Heavily influenced by, and some code from the [Ruby-Build
-cookbook][chef-ruby_build]:
-Author:: [Fletcher Nichol][fnichol] (<fnichol@nichol.ca>)
+cookbook][chef-ruby_build], Author:: [Fletcher Nichol][fnichol] (<fnichol@nichol.ca>)
 
 Copyright 2013, Ross Timson
 
@@ -120,6 +119,7 @@ limitations under the License.
 
 
 [rosstimson]:         https://github.com/rosstimson
+[fnichol]:            https://github.com/fnichol
 [repo]:               https://github.com/rosstimson/chef-ruby_install
 [issues]:             https://github.com/rosstimson/chef-ruby_install/issues
 [chef-ruby_build]:    https://github.com/fnichol/chef-ruby_build
