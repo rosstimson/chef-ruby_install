@@ -12,3 +12,8 @@ depends          'yum'
 
 supports         'ubuntu'
 supports         'centos'
+
+attribute 'ruby_install/default_ruby_base_path',
+  :display_name => 'Default Ruby Base Path',
+  :description => 'Location where Rubies should be installed',
+  :default => '/opt/rubies'
