@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'chef', '~> 11.4'
-gem 'berkshelf'
-gem 'thor-foodcritic'
+gem 'berkshelf', '~> 2.0'
 gem 'foodcritic'
-gem 'test-kitchen', github: 'opscode/test-kitchen'
-gem 'kitchen-vagrant', group: :integration
+gem 'thor-foodcritic'
 gem 'emeril'
+
+group :integration do
+  gem 'test-kitchen', '~> 1.1'
+  gem 'kitchen-vagrant'
+end

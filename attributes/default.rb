@@ -19,8 +19,8 @@
 # limitations under the License.
 #
 
-default['ruby_install']['version'] = '0.3.0'
-default['ruby_install']['checksum'] = '0aeff921d129a2fddf8fd27aaf620dea037132c5c51f88cd5b3e1a66638ba45a'
+default['ruby_install']['version'] = '0.3.4'
+default['ruby_install']['checksum'] = '10929e1b778eb40eacd8bcb6f11cf53d8e686702b55ef7039e0d1cd3059977e6'
 
 # Install rubies into /opt/rubies as expected by Chruby.
 default['ruby_install']['default_ruby_base_path'] = '/opt/rubies'

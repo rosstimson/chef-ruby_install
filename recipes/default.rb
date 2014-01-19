@@ -19,7 +19,7 @@
 # limitations under the License.
 #
 
-# Relying on ruby-install to grab build dependencies for Rubies but it will 
+# Relying on ruby-install to grab build dependencies for Rubies but it will
 # fail unless package index files are not up to date.
 case node['platform_family']
 when 'debian'
@@ -33,5 +33,6 @@ include_recipe 'ark'
 ark 'ruby_install' do
   url "https://github.com/postmodern/ruby-install/archive/v#{node['ruby_install']['version']}.tar.gz"
   checksum node['ruby_install']['checksum']
+  prefix_root '/tmp' # Don't need /usr/local/ruby-install
   action :install_with_make
 end

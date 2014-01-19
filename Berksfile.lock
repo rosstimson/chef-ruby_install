@@ -7,13 +7,13 @@
       "path": "./test/cookbooks/alltherubies"
     },
     "ark": {
-      "locked_version": "0.3.2"
+      "locked_version": "0.4.2"
     },
     "apt": {
-      "locked_version": "1.9.2"
+      "locked_version": "2.3.4"
     },
     "yum": {
-      "locked_version": "2.2.0"
+      "locked_version": "3.0.4"
     }
   }
 }
