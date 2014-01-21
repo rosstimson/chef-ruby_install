@@ -30,7 +30,7 @@ Platform
 The following platforms are supported and tested under test kitchen.
 
 * Ubuntu 10.04, 12.04
-* CentOS 5.8, 6.3
+* CentOS 5.10, 6.5
 
 Other Debian and RHEL family distributions are assumed to work.  Other
 distributions that [ruby-install][ruby-install] supports should also
@@ -61,7 +61,7 @@ version
 
 The version of ruby-install that will be installed.
 
-The default is the current latest version 0.2.1
+The default is the current latest version 0.3.4
 
 checksum
 --------
@@ -103,7 +103,7 @@ Author:: [Ross Timson][rosstimson] (<ross@rosstimson.com>)
 Heavily influenced by, and some code from the [Ruby-Build
 cookbook][chef-ruby_build], Author:: [Fletcher Nichol][fnichol] (<fnichol@nichol.ca>)
 
-Copyright 2013, Ross Timson
+Copyright 2013-2014, Ross Timson
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
