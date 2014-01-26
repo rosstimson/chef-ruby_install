@@ -1,3 +1,9 @@
+v0.1.2:
+=======
+
+* Last release got mangled with PaxHeaders in directories which seems to be due
+  to an issue with bsdtar in later versions of OS X.
+
 v0.1.1:
 =======
 
