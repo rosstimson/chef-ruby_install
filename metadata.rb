@@ -5,7 +5,7 @@ maintainer_email 'ross@rosstimson.com'
 license          'Apache v2.0'
 description      'Installs/Configures ruby-install'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.2'
+version          '0.1.3'
 
 depends          'ark'
 depends          'apt'
