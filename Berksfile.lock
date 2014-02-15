@@ -6,6 +6,9 @@
     "alltherubies": {
       "path": "./test/cookbooks/alltherubies"
     },
+    "partial_ruby_version": {
+      "path": "./test/cookbooks/partial_ruby_version"
+    },
     "ark": {
       "locked_version": "0.4.2"
     },

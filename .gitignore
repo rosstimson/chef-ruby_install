@@ -15,3 +15,5 @@ bin/*
 # Test-Kitchen
 .kitchen/
 .kitchen.local.yml
+
+.coverage/

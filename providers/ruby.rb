@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #
 # Cookbook Name:: ruby_install
 # Provider:: ruby
@@ -23,15 +24,17 @@
 def load_current_resource
   @rubie        = new_resource.definition
   @prefix_path  = new_resource.prefix_path ||
-    "#{node['ruby_install']['default_ruby_base_path']}/#{@rubie.gsub(' ', '-')}"
+    node['ruby_install']['default_ruby_base_path']
 end
 
 action :install do
   perform_install
+  new_resource.updated_by_last_action(true)
 end
 
 action :reinstall do
   perform_install
+  new_resource.updated_by_last_action(true)
 end
 
 private
@@ -49,16 +52,15 @@ def perform_install
     rubie       = @rubie        # bypass block scoping issue
     prefix_path = @prefix_path  # bypass block scoping issue
     execute "ruby-install[#{rubie}]" do
-      command   %{/usr/local/bin/ruby-install -i "#{prefix_path}" "#{rubie}"}
+      command   %{/usr/local/bin/ruby-install --rubies-dir "#{prefix_path}" "#{rubie}"}
       user        new_resource.user         if new_resource.user
       group       new_resource.group        if new_resource.group
       environment new_resource.environment  if new_resource.environment
-
       action    :nothing
     end.run_action(:run)
 
     Chef::Log.info("ruby_install_ruby[#{@rubie}] build time was " +
-      "#{(Time.now - install_start)/60.0} minutes")
+      "#{(Time.now - install_start) / 60.0} minutes")
     new_resource.updated_by_last_action(true)
   end
 end

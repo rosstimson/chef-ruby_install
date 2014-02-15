@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 name             'ruby_install'
 maintainer       'Ross Timson'
 maintainer_email 'ross@rosstimson.com'
@@ -10,10 +11,11 @@ depends          'ark'
 depends          'apt'
 depends          'yum'
 
-supports         'ubuntu'
-supports         'centos'
+%w{ amazon centos debian ubuntu }.each do |os|
+  supports os
+end
 
 attribute 'ruby_install/default_ruby_base_path',
-  :display_name => 'Default Ruby Base Path',
-  :description => 'Location where Rubies should be installed',
-  :default => '/opt/rubies'
+          display_name: 'Default Ruby base path',
+          description: 'Location where Rubies should be installed',
+          default: '/opt/rubies'

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #
 # Cookbook Name:: ruby_install
 # Recipe:: default
@@ -31,7 +32,7 @@ end
 include_recipe 'ark'
 
 ark 'ruby_install' do
-  url "https://github.com/postmodern/ruby-install/archive/v#{node['ruby_install']['version']}.tar.gz"
+  url "https://github.com/postmodern/ruby-install/archive/v#{node['ruby_install']['version']}.tar.gz" # rubocop:disable LineLength
   checksum node['ruby_install']['checksum']
   prefix_root '/tmp' # Don't need /usr/local/ruby-install
   action :install_with_make

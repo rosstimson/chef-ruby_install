@@ -1,11 +1,26 @@
 ---
-driver_plugin: vagrant
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
 
 platforms:
-- name: ubuntu-12.04
-- name: ubuntu-10.04
-- name: centos-6.5
-- name: centos-5.10
+  - name: ubuntu-12.04
+  - name: debian-7.2.0
+  - name: centos-6.5
+  - name: amazon
+    driver:
+      name: ec2
+      image_id: ami-5456b823
+      region: eu-west-1
+      availability_zone: eu-west-1a
+      flavor_id: m1.small
+      username: ec2-user
+      aws_access_key_id: <%= ENV['TK_AWS_ACCESS_KEY_ID'] %>
+      aws_secret_access_key: <%= ENV['TK_AWS_SECRET_ACCESS_KEY'] %>
+      aws_ssh_key_id: <%= ENV['TK_AWS_SSH_KEY_ID'] %>
+      ssh_key: <%= File.expand_path('~/.ssh/test-kitchen-aws.pem') %>
 
 suites:
 - name: alltherubies
@@ -15,3 +30,7 @@ suites:
 - name: installation
   run_list:
   - recipe[ruby_install]
+- name: partial_ruby_version
+  run_list:
+  - recipe[ruby_install]
+  - recipe[partial_ruby_version]

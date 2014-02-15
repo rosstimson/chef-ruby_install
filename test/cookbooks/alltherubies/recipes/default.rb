@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Be specific with version and patch level as this is hardcoded in the tests.
 #
 # Not testing Maglev as ./configure complains if run as root and fails, also
@@ -6,5 +7,5 @@
 ruby_install_ruby 'ruby 1.9.3-p484'
 ruby_install_ruby 'ruby 2.0.0-p353'
 ruby_install_ruby 'ruby 2.1.0'
-ruby_install_ruby 'jruby 1.7.9'
-ruby_install_ruby 'rubinius 2.2.2'
+ruby_install_ruby 'jruby 1.7.10'
+ruby_install_ruby 'rbx 2.2.5'
