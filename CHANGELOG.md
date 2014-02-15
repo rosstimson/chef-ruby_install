@@ -1,6 +1,15 @@
 ruby-install Cookbook
 =====================
 
+v1.0.0 (2014-02-15)
+-------------------
+
+* Upgrade to ruby-install 0.4.0
+* Use new --rubies-dir option to specify location of installed rubies,
+  this gives more expected behaviour and works well with partial version
+  strings.  Fixes GH #3.
+
+
 v0.1.3 (2014-02-15)
 -------------------
 
