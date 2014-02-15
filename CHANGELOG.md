@@ -9,11 +9,6 @@ v1.0.0 (2014-02-15)
   this gives more expected behaviour and works well with partial version
   strings.  Fixes GH #3.
 
-
-v0.1.3 (2014-02-15)
--------------------
-
-
 v0.1.2
 -------
 
