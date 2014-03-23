@@ -42,12 +42,12 @@ private
 def perform_install
   if ruby_installed?
     Chef::Log.debug(
-      "ruby_install_ruby[#{@rubie}] is already installed, so skipping")
+      "ruby_install_ruby[#@rubie] is already installed, so skipping")
   else
     install_start = Time.now
 
     Chef::Log.info(
-      "Building ruby_install_ruby[#{@rubie}], this could take a while...")
+      "Building ruby_install_ruby[#@rubie], this could take a while...")
 
     rubie       = @rubie        # bypass block scoping issue
     prefix_path = @prefix_path  # bypass block scoping issue
@@ -59,7 +59,7 @@ def perform_install
       action    :nothing
     end.run_action(:run)
 
-    Chef::Log.info("ruby_install_ruby[#{@rubie}] build time was " +
+    Chef::Log.info("ruby_install_ruby[#@rubie] build time was " +
       "#{(Time.now - install_start) / 60.0} minutes")
     new_resource.updated_by_last_action(true)
   end
@@ -69,6 +69,7 @@ def ruby_installed?
   if Array(new_resource.action).include?(:reinstall)
     false
   else
-    ::File.exists?("#{@prefix_path}/bin/ruby")
+    install_dirname = @rubie.sub(' ', '-')
+    ::File.exists?("#@prefix_path/#{install_dirname}/bin/ruby")
   end
 end
