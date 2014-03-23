@@ -7,7 +7,7 @@ provisioner:
 
 platforms:
   - name: ubuntu-12.04
-  - name: debian-7.2.0
+  - name: debian-7.4.0
   - name: centos-6.5
   - name: amazon
     driver:
