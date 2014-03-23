@@ -4,8 +4,8 @@
 # Not testing Maglev as ./configure complains if run as root and fails, also
 # compiling Maglev consistantly locks up my machine (old hardware).
 
-ruby_install_ruby 'ruby 1.9.3-p484'
-ruby_install_ruby 'ruby 2.0.0-p353'
-ruby_install_ruby 'ruby 2.1.0'
-ruby_install_ruby 'jruby 1.7.10'
+ruby_install_ruby 'ruby 1.9.3-p545'
+ruby_install_ruby 'ruby 2.0.0-p451'
+ruby_install_ruby 'ruby 2.1.1'
+ruby_install_ruby 'jruby 1.7.11'
 ruby_install_ruby 'rbx 2.2.5'
