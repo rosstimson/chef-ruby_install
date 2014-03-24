@@ -29,8 +29,10 @@ Platform
 
 The following platforms are supported and tested under test kitchen.
 
-* Ubuntu 10.04, 12.04
-* CentOS 5.10, 6.5
+* Ubuntu 12.04
+* Debian 7.4
+* CentOS 6.5
+* Amazon Linux (2013.09.2)
 
 Other Debian and RHEL family distributions are assumed to work.  Other
 distributions that [ruby-install][ruby-install] supports should also
@@ -61,7 +63,7 @@ version
 
 The version of ruby-install that will be installed.
 
-The default is the current latest version 0.3.4
+The default is the current latest version 0.4.1
 
 checksum
 --------
