@@ -1,6 +1,15 @@
 ruby-install Cookbook
 =====================
 
+v1.0.2 (2014-03-24)
+-------------------
+
+* Update default ruby_install version to 0.4.1 (@brainopia)
+* Fix broken redirect on latest Chef (@brainopia)
+* Prevent reinstall on :install action (@brainopia)
+* Slight refactor to fix RuboCop warnings
+
+
 v1.0.0 (2014-02-15)
 -------------------
 
