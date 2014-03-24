@@ -11,7 +11,7 @@ depends          'ark'
 depends          'apt'
 depends          'yum'
 
-%w{ amazon centos debian ubuntu }.each do |os|
+%w( amazon centos debian ubuntu ).each do |os|
   supports os
 end
 
