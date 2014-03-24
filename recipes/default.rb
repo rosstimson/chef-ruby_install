@@ -38,3 +38,7 @@ ark 'ruby_install' do
   prefix_root '/tmp' # Don't need /usr/local/ruby-install
   action :install_with_make
 end
+
+# Make sure ruby-install has correct ownership, Debian doesn't seem to use
+# group 'root' when it is installed unlike all the others including Ubuntu.
+execute 'chown root:root /usr/local/bin/ruby-install'
