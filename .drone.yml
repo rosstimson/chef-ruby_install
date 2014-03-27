@@ -1,0 +1,7 @@
+image: bradrydzewski/ruby:2.0.0
+env:
+  - CI=drone
+script:
+  - bundle install
+  - bundle exec berks install
+  - bundle exec rake style spec
