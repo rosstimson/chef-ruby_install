@@ -1,4 +1,4 @@
-image: bradrydzewski/ruby:2.0.0
+image: bowery/ruby
 env:
   - CI=drone
 script:
