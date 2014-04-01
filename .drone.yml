@@ -1,4 +1,4 @@
-image: bowery/ruby
+image: quay.io/rosstimson/packer
 env:
   - CI=drone
 script:
