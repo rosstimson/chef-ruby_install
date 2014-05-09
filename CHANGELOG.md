@@ -1,6 +1,13 @@
 ruby-install Cookbook
 =====================
 
+v1.0.4 (2014-05-09)
+-------------------
+
+* Upgraded ruby-install to 0.4.3
+* Updates to Rubies and OSs
+
+
 v1.0.2 (2014-03-24)
 -------------------
 
