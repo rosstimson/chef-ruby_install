@@ -6,6 +6,6 @@
 
 ruby_install_ruby 'ruby 1.9.3-p545'
 ruby_install_ruby 'ruby 2.0.0-p451'
-ruby_install_ruby 'ruby 2.1.1'
-ruby_install_ruby 'jruby 1.7.11'
-ruby_install_ruby 'rbx 2.2.5'
+ruby_install_ruby 'ruby 2.1.2'
+ruby_install_ruby 'jruby 1.7.12'
+ruby_install_ruby 'rbx 2.2.6'

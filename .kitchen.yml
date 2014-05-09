@@ -7,12 +7,12 @@ provisioner:
 
 platforms:
   - name: ubuntu-12.04
-  - name: debian-7.4
+  - name: debian-7.5
   - name: centos-6.5
   - name: amazon
     driver:
       name: ec2
-      image_id: ami-5456b823
+      image_id: ami-2918e35e
       region: eu-west-1
       availability_zone: eu-west-1a
       flavor_id: m1.small
@@ -20,7 +20,7 @@ platforms:
       aws_access_key_id: <%= ENV['TK_AWS_ACCESS_KEY_ID'] %>
       aws_secret_access_key: <%= ENV['TK_AWS_SECRET_ACCESS_KEY'] %>
       aws_ssh_key_id: <%= ENV['TK_AWS_SSH_KEY_ID'] %>
-      ssh_key: <%= File.expand_path('~/.ssh/test-kitchen-aws.pem') %>
+      ssh_key: <%= File.expand_path('~/.ssh/test-kitchen.pem') %>
 
 suites:
 - name: alltherubies

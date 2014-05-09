@@ -20,8 +20,8 @@
 # limitations under the License.
 #
 
-default['ruby_install']['version'] = '0.4.1'
-default['ruby_install']['checksum'] = '1b35d2b6dbc1e75f03fff4e8521cab72a51ad67e32afd135ddc4532f443b730e' # rubocop:disable LineLength
+default['ruby_install']['version'] = '0.4.3'
+default['ruby_install']['checksum'] = '0ec8c23699aad534dcab549c0f6543e066725a62f5b3d7e8dae311c61df1aef3' # rubocop:disable LineLength
 
 # Install rubies into /opt/rubies as expected by Chruby.
 default['ruby_install']['default_ruby_base_path'] = '/opt/rubies'
