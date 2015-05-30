@@ -25,6 +25,21 @@
 case node['platform_family']
 when 'debian'
   include_recipe 'apt'
+  packages = []
+
+  case node[:lsb][:codename]
+  when "lucid"
+      packages |= %w{ libssl0.9.8 }
+  when "precise"
+      packages |= %w{ libssl1.0.0 libssl-1.0.0-dbg }
+  else
+    packages = %w{ libssl1.0.0 libssl1.0.0-dbg }
+  end
+  packages.each do |pkg|
+      package pkg do
+        action :upgrade
+      end
+  end
 when 'rhel'
   include_recipe 'yum'
 end
