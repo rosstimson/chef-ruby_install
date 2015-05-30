@@ -3,24 +3,13 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_solo
+  name: chef_zero
 
 platforms:
-  - name: ubuntu-12.04
-  - name: debian-7.5
-  - name: centos-6.5
-  - name: amazon
-    driver:
-      name: ec2
-      image_id: ami-2918e35e
-      region: eu-west-1
-      availability_zone: eu-west-1a
-      flavor_id: m1.small
-      username: ec2-user
-      aws_access_key_id: <%= ENV['TK_AWS_ACCESS_KEY_ID'] %>
-      aws_secret_access_key: <%= ENV['TK_AWS_SECRET_ACCESS_KEY'] %>
-      aws_ssh_key_id: <%= ENV['TK_AWS_SSH_KEY_ID'] %>
-      ssh_key: <%= File.expand_path('~/.ssh/test-kitchen.pem') %>
+  - name: ubuntu-14.10
+  - name: debian-7.8
+  - name: centos-7.1
+  - name: fedora-21
 
 suites:
 - name: alltherubies

@@ -2,7 +2,7 @@
 
 require_relative 'spec_helper'
 
-describe 'ruby-install 0.4.3 is installed at /usr/local/bin/ruby-install' do
+describe 'ruby-install is installed at /usr/local/bin/ruby-install' do
   describe file('/usr/local/bin/ruby-install') do
     it { should be_file }
     it { should be_owned_by 'root' }
@@ -11,7 +11,7 @@ describe 'ruby-install 0.4.3 is installed at /usr/local/bin/ruby-install' do
   end
 
   describe command('/usr/local/bin/ruby-install --version') do
-    it { should return_exit_status 0 }
-    it { should return_stdout 'ruby-install: 0.4.3' }
+    its(:exit_status) { should eq 0 }
+    its(:stdout) { should match /ruby-install: 0.5.0/ }
   end
 end
