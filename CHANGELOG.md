@@ -1,6 +1,12 @@
 ruby-install Cookbook
 =====================
 
+v1.0.5 (2015-05-30)
+-------------------
+
+* Bump to ruby-install 0.5.0 (@ashtonthomas)
+* Update libssl prior to ruby-install (@kplimack)
+
 v1.0.4 (2014-05-09)
 -------------------
 
